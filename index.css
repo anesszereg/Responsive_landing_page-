@@ -105,11 +105,12 @@ li:hover::after {
   color: hsl(0, 0%, 55%);
 }
 
-.creations {
+#creations {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  justify-content: center;
+  
+  
 }
 .title_bar {
   display: flex;
@@ -148,16 +149,17 @@ button:hover {
   grid-template-columns: repeat(4, 1.3fr);
   gap: 20px;
   grid-template-rows: repeat(2, 1fr);
+  position: relative;
 }
 
 .image_container {
   overflow: hidden;
   position: relative;
 }
-.image_container img:hover {
-  background: hsl(0, 0%, 0%,0.5);
+.image_container:hover {
+
   cursor: pointer;
-  scale: 1.1;
+  scale: 0.9;
   transition: all 0.5s;
 }
 
@@ -179,16 +181,24 @@ button:hover {
 
 .grid_text {
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.5); /* Add background color with some transparency */
-  padding: 10px; /* Add padding for better readability */
-  text-align: center; /* Center-align text */
+  top: 0;
+  left: 0; /* transform: translateX(-10%); */
+  background-color: rgba(0, 0, 0, 0.4); /* Add background color with some transparency */
+  padding: 10px; 
+  padding-top: 95px;/* Add padding for better readability */
+  text-align: start; /* Center-align text */
   width: 100%;
-  height: 100%; /* Make text span the entire width of the container */
+  height: 97%; /* Make text span the entire width of the container */
   box-sizing: border-box; /* Ensure padding is included in width calculation */
+  color: #fff;
+  font-size: 24px;
+  font-weight: 200;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+
 }
+
+
 
 
 
@@ -264,4 +274,18 @@ button:hover {
     width: 100%;
     object-fit: contain;
   }
+
+
+  .btn_desk{
+    display: none;
+  }
+
+
+
+  #creations{
+    align-items: center;
+    justify-content: center;
+  }
+
+  
 }
