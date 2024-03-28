@@ -140,7 +140,7 @@ button {
 }
 
 button:hover {
-  background-color: hsl(0, 0%, 95%);
+  background-color: hsl(0, 12%, 51%);
 }
 
 .grid_container {
@@ -155,7 +155,7 @@ button:hover {
   position: relative;
 }
 .image_container img:hover {
-  opacity: 0.5;
+  background: hsl(0, 0%, 0%,0.5);
   cursor: pointer;
   scale: 1.1;
   transition: all 0.5s;
@@ -174,54 +174,94 @@ button:hover {
 }
 .image_mobile {
   display: none;
+  
 }
 
-/* media quiry */
+.grid_text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Add background color with some transparency */
+  padding: 10px; /* Add padding for better readability */
+  text-align: center; /* Center-align text */
+  width: 100%;
+  height: 100%; /* Make text span the entire width of the container */
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
 
-/* @media (max-width: 430px) {
+
+
+
+
+  
+
+@media (max-width: 450px) {
+
+  .content{
+    padding: 20px;
+  }
 
   #hero {
-    padding: 39px 0 45px 20px;
+    padding: 20px;
+    height: auto;
+    background-image: url("./images/mobile/image-hero.jpg");
+    min-height: 400px; /* Ensures content is not squeezed */
   }
-  .menu_desktop{
+
+  .menu_desktop {
     display: none;
   }
-  .menu_phone{
+
+  .menu_phone {
     display: block;
   }
-  .title_container{
+
+  .title_container {
     width: 300px;
-    
   }
-  .title_container h1{
+
+  .title_container h1 {
     font-size: 40px;
   }
-  
-  #about{
+
+  #about {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  
-  .image_desktop{
+
+  .image_desktop {
     display: none;
   }
+
   .image_mobile {
-    display:block;
-    width: 362px;
+    display: block;
+    width: 100%; /* Ensures image fills its container */
+    height: auto; /* Allows image to scale with its width */
+    max-width: 362px; /* Limits image width to prevent overflow */
+    margin-bottom: 20px; /* Adds some space below the image */
   }
-  .text_content{
+
+  .text_content {
     text-align: center;
-    width:44.2vh;
     padding: 20px;
     margin-left: 0;
   }
-  .title{
+
+  .title {
     font-size: 30px;
   }
 
-  
-
-  
-} */
+  .grid_container {
+    grid-template-columns: repeat(1, 1fr); /* Two columns instead of four */
+  }
+  .image_d{
+    display: none;
+  }
+  .image_m{
+    width: 100%;
+    object-fit: contain;
+  }
+}

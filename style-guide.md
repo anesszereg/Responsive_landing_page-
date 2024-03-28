@@ -13,6 +13,9 @@ The designs were created to the following widths:
 
 ### Primary
 
+* TODO : Add primary color
+
+
 - White: hsl(0, 0%, 100%)
 - Black: hsl(0, 0%, 0%)
 - Dark Gray: hsl(0, 0%, 55%)
